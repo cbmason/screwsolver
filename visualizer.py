@@ -56,11 +56,11 @@ def generate_win_by_start_table(dbfile, serialize=True):
     for i in range(2, 51):
         if database.get_does_player_count_exist(i):
             for card in range(Rank.Ace.value, Rank.King.value):
-                print(f"Generating {i} player with {card} winrate when KEEPING")
+                print(f"Generating {i} player with {card} winrate when PASSING")
                 winratio = database.get_win_ratio_when_acting_first(i, card, True)
                 winpct = winratio * 100
                 output = output.append({'num_players': i, 'start_card': card, 'swap': True, 'winrate': winpct}, ignore_index=True)
-                print(f"Generating {i} player with {card} winrate when PASSING")
+                print(f"Generating {i} player with {card} winrate when KEEPING")
                 winratio = database.get_win_ratio_when_acting_first(i, card, False)
                 winpct = winratio * 100
                 output = output.append({'num_players': i, 'start_card': card, 'swap': False, 'winrate': winpct}, ignore_index=True)

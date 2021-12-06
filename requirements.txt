@@ -3,3 +3,4 @@ pandas
 kaleido
 psutil
 orca
+plotly
