@@ -1,0 +1,11 @@
+# Ignore data folder
+data
+
+# Ignore tool/IDE folders
+.idea
+.vscode
+.ipynb_checkpoints
+__pycache__
+
+# Ignore log files
+*.log
